@@ -1,6 +1,6 @@
-package datastructure.stack;
+package io.github.wellingtoncosta.datastructures.stack;
 
-public interface IStack<T> {
+public interface Stack<T> {
 
     boolean push(T value);
 

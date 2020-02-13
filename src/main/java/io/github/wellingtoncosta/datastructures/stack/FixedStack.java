@@ -1,12 +1,14 @@
-package datastructure.stack;
+package io.github.wellingtoncosta.datastructures.stack;
 
 @SuppressWarnings("unchecked")
-public class Stack<T> implements IStack<T> {
+public class FixedStack<T> implements Stack<T> {
 
-    private static int INITIAL_SIZE = 1024;
-
-    private T[] array = (T[]) new Object[INITIAL_SIZE];
+    private final T[] array;
     private int size = 0;
+
+    public FixedStack(int size) {
+        array = (T[]) new Object[size];
+    }
 
     public boolean push(T value) {
         if (isFull()) {
