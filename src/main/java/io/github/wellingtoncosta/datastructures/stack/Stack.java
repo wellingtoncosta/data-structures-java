@@ -6,8 +6,6 @@ public interface Stack<T> {
 
     T pop();
 
-    T get(int index);
-
     T top();
 
     boolean isEmpty();

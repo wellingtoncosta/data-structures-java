@@ -27,14 +27,6 @@ public class FixedStack<T> implements Stack<T> {
         return array[--size];
     }
 
-    public T get(int index) {
-        if (size == 0) {
-            return null;
-        }
-
-        return array[index];
-    }
-
     public T top() {
         return array[size-1];
     }
