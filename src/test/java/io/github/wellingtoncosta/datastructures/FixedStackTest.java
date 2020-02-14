@@ -64,4 +64,20 @@ public class FixedStackTest {
         assertNull(value);
     }
 
+    @Test public void getTopElementOfAnEmptyStack() {
+        Stack<Integer> stack = new FixedStack<Integer>(100);
+        Integer value = stack.top();
+        assertNull(value);
+    }
+
+    @Test public void getTopElementOfNonEmptyStack() {
+        Stack<Integer> stack = new FixedStack<Integer>(100);
+        Integer top = 10;
+        stack.push(top * 3);
+        stack.push(top * 2);
+        stack.push(top);
+        Integer value = stack.top();
+        assertEquals(top, value);
+    }
+
 }

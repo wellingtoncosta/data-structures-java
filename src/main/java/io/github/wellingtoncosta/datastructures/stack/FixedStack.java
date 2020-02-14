@@ -28,6 +28,10 @@ public class FixedStack<T> implements Stack<T> {
     }
 
     public T top() {
+        if (isEmpty()) {
+            return null;
+        }
+
         return array[size-1];
     }
 
